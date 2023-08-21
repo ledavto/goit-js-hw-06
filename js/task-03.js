@@ -14,12 +14,11 @@ const images = [
 ];
 
 const imgGalery = document.querySelector(".gallery");
+const liArray = [];
+images.forEach (elem => 
+  liArray.push(`<li> <img src="${elem.url}" alt="${elem.alt}"></li>`)
+)
 
-for (const key in images) {
-}
+imgGalery.insertAdjacentHTML("afterbegin", liArray.join(""));
 
-const markup = newTechnologies
-  .map((technology) => `<li class="list-item new">${technology}</li>`)
-  .join("");
 
-list.insertAdjacentHTML("beforeend", markup);
