@@ -14,11 +14,8 @@ const images = [
 ];
 
 const imgGalery = document.querySelector(".gallery");
-const liArray = [];
-images.forEach (elem => 
-  liArray.push(`<li> <img src="${elem.url}" alt="${elem.alt}"></li>`)
-)
+const arrayLi = images.map((elem) => {
+  return `<li> <img src="${elem.url}" alt="${elem.alt}"></li>`;
+});
 
-imgGalery.insertAdjacentHTML("afterbegin", liArray.join(""));
-
-
+imgGalery.insertAdjacentHTML("afterbegin", arrayLi.join(""));
