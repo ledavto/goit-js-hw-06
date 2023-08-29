@@ -25,8 +25,9 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  const arrDiv = document.querySelectorAll("divbox");
+  const arrDiv = document.querySelectorAll(".divbox");
   console.log(arrDiv);
+  //arrDiv.remove();
   arrDiv.forEach((element) => {
     element.remove();
   });
@@ -34,13 +35,3 @@ function destroyBoxes() {
 btnCreate.addEventListener("click", () => createBoxes(numInput.value));
 btnDestroy.addEventListener("click", () => destroyBoxes());
 
-// const btnEl = document.querySelector('.change-color');
-// const spanEl = document.querySelector('.color');
-
-// console.log(btnEl);
-
-// btnEl.addEventListener('click', () => {
-//   const randColor = getRandomHexColor();
-//   spanEl.textContent = randColor;
-//   document.body.style.backgroundColor = randColor;
-// });
